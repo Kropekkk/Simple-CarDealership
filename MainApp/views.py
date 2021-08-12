@@ -1,5 +1,11 @@
 from django.shortcuts import render
 
+from .models import Offer
+
 
 def index(request):
-    return render(request,"MainApp/index.html")
+    offers = Offer.objects.all()
+    return render(request,"MainApp/index.html",
+    {
+        'offers': offers
+    })

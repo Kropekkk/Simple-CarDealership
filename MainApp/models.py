@@ -1,18 +1,12 @@
 from django.db import models
 
-BRAND_CHOICES = (
-    ('TESLA','TESLA'),
-    ('SUZUKI','SUZUKI'),
-)
-
-MODEL_CHOICES = (
-
-)
-
-class Car(models.Model):
-    brand = models.CharField(choices=BRAND_CHOICES,max_length=20)
+class Offer(models.Model):
+    brand = models.CharField(max_length=20)
     model = models.CharField(max_length=20)
-    year_production = models.IntegerField()
+    generation = models.CharField(max_length=8,blank=True)
+    price=models.CharField(max_length=7)
+    mainimage = models.ImageField(upload_to='images')
+    description=models.CharField(max_length=200)
 
-class Details(models.Model):
-    car = models.ForeignKey(Car,on_delete=models.CASCADE)
+    def __str__(self):
+        return f"{self.brand} {self.model}"
