@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ offer.brand }} {{ offer.model }}</title>
+    <link rel="stylesheet" href="{% static 'MainApp/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'MainApp/css/car.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="car">
+            <img src="{{ offer.mainimage.url }}" alt="">
+            <div class="details">
+                <h2>{{ offer.brand }} {{ offer.model}} {{ offer.generation }}</h2>
+                <h3>{{ offer.year }} <span>-</span> {{ offer.distance }} km</h3>
+                <div class="price">
+                    <h2>{{ offer.price }} $</h2>
+                </div>
+                <p>
+                {{ offer.description }}
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

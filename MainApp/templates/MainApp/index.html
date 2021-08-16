@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
     <link rel="stylesheet" href="{% static 'MainApp/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'MainApp/css/mainpage.css' %}">
 </head>
 <body>
     <div class="container">
@@ -22,7 +23,7 @@
 
         <div class="offers">
             {% for offer in offers %}
-                <a href="">
+                <a href="cars/{{offer.id}}/{{offer.brand}}">
                     <div class="offer">
                         <img src="{{offer.mainimage.url}}" alt="">
 

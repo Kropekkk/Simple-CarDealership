@@ -8,7 +8,7 @@ class Offer(models.Model):
     distance = models.CharField(max_length=7)
     price=models.CharField(max_length=7)
     mainimage = models.ImageField(upload_to='images')
-    description=models.CharField(max_length=200)
+    description=models.TextField()
 
     def __str__(self):
         return f"{self.brand} {self.model}"
