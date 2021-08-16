@@ -13,7 +13,16 @@
     <div class="container">
         <div class="car">
             <img src="{{ offer.mainimage.url }}" alt="">
-            <h2>{{ offer.brand }} {{ offer.model}}</h2>
+            <div class="details">
+                <h2>{{ offer.brand }} {{ offer.model}} {{ offer.generation }}</h2>
+                <h3>{{ offer.year }} <span>-</span> {{ offer.distance }} km</h3>
+                <div class="price">
+                    <h2>{{ offer.price }} $</h2>
+                </div>
+                <p>
+                {{ offer.description }}
+                </p>
+            </div>
         </div>
     </div>
 </body>

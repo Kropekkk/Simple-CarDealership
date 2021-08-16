@@ -1,8 +1,45 @@
 .car {
+    display: block;
+    background-color: white;
+    padding-bottom: 15px;
+}
 
+.details {
+    text-align: center;
 }
 
 img {
-    height: 400px;
-    width: 400px;
+    height: 330px;
+    width: 440px;
+    border-radius: 5px;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+span {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+@media (min-width:650px) {
+    img {
+        height: 390px;
+        width: 520px;
+    }
+}
+
+@media (min-width:1000px) {
+    .car {
+        width: 1000px;
+        margin: auto;
+        height: 500px;
+    }
+    img {
+        float: left;
+        height: 450px;
+        width: 600px;
+    }
 }
