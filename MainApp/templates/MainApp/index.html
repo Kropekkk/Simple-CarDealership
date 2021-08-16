@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="{% static 'MainApp/css/main.css' %}">
+</head>
+<body>
+    <div class="container">
+
+        <div class="top">
+            <div class="logo">
+                <h1>CarDealer</h1>
+            </div>
+            <div class="contact">
+                <p>Phone: 999-888-777</p> 
+            </div>
+        </div>
+
+        <div class="offers">
+            {% for offer in offers %}
+                <a href="">
+                    <div class="offer">
+                        <img src="{{offer.mainimage.url}}" alt="">
+
+                        <div class="name">
+                            <h2>{{ offer.brand }} {{ offer.model }} {{ offer.generation }}</h2>
+                            <h3>{{ offer.year }} <span>-</span> {{ offer.distance }} km</h3>
+                        </div>
+                            
+                        <div class="price">
+                            <h2>{{ offer.price }} $</h2>
+                        </div>
+
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
