@@ -11,15 +11,20 @@
 </head>
 <body>
     <div class="container">
-
-        <div class="top">
-            <div class="logo">
-                <h1>CarDealer</h1>
-            </div>
-            <div class="contact">
-                <p>Phone: 999-888-777</p> 
-            </div>
-        </div>
+            <nav>
+                <div class="top">
+                    <div class="middle">
+                        <div class="logo">
+                            <a href="#mainPage" id="mainPage"><h1>CarDealer</h1></a>
+                        </div>
+                        <div class="contact">
+                            <p>Phone: 999-888-777</p> 
+                             <p>Location: Poland</p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        
 
         <div class="offers">
             {% for offer in offers %}
@@ -41,5 +46,6 @@
             {% endfor %}
         </div>
     </div>
+    <script src="{% static 'MainApp/js/main.js' %}"></script>
 </body>
 </html>
