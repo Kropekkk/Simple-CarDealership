@@ -12,6 +12,11 @@ body {
 
 a {
     text-decoration: none;
+    color: aliceblue;
+}
+
+h1 {
+    margin: 0px;
 }
 
 h2 {
